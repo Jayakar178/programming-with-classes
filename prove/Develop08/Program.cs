@@ -9,12 +9,16 @@ class Program
             Console.Clear();
             Console.WriteLine("Mindfulness Program");
             Console.WriteLine("-------------------");
-            Console.WriteLine("1. Start Breathing Activity");
-            Console.WriteLine("2. Start Reflection Activity");
-            Console.WriteLine("3. Start Listing Activity");
-            Console.WriteLine("4. Quit");
-            Console.Write("Choose an option (1-4): ");
-            string choice = Console.ReadLine();
+         Console.WriteLine("1. Start Breathing Activity");
+         Console.WriteLine("2. Start Reflection Activity");
+         Console.WriteLine("3. Start Listing Activity");
+         Console.WriteLine("4. Start Gratitude Activity");
+         Console.WriteLine("5. Quit");
+         Console.Write("Choose an option (1-5): ");
+
+            string? choice = Console.ReadLine();
+            choice = choice ?? ""; 
+
 
             if (choice == "1")
             {
@@ -33,13 +37,18 @@ class Program
             }
             else if (choice == "4")
             {
-                Console.WriteLine("Goodbye!");
+                GratitudeActivity gratitude = new GratitudeActivity();
+                gratitude.Run();
+            }
+
+            else if (choice == "5")
+            {
+                Console.WriteLine("Thank you for using the Mindfulness Program. Goodbye!");
                 break;
             }
             else
             {
-                Console.WriteLine("Invalid choice. Press Enter to try again.");
-                Console.ReadLine();
+                Console.WriteLine("Invalid choice. Please try again.");
             }
         }
     }

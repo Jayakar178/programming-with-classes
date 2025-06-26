@@ -12,11 +12,9 @@ public class ListingActivity : MindfulnessActivity
         "Who are some of your personal heroes?"
     };
 
-    public ListingActivity()
-    {
-        _name = "Listing Activity";
-        _description = "List as many positive things in a category as you can.";
-    }
+    public ListingActivity() 
+        : base("Listing Activity", "List as many positive things in a category as you can.") 
+    { }
 
     public void Run()
     {

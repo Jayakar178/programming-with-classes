@@ -7,13 +7,30 @@ public class MindfulnessActivity
     protected string _description;
     protected int _duration;
 
+    public MindfulnessActivity(string name, string description)
+    {
+        _name = name;
+        _description = description;
+    }
+
     public void StartMessage()
     {
         Console.Clear();
         Console.WriteLine($"Starting: {_name}\n");
         Console.WriteLine($"{_description}\n");
         Console.Write("Enter duration in seconds: ");
-        _duration = int.Parse(Console.ReadLine());
+       Console.Write("Enter duration in seconds: ");
+       string? input = Console.ReadLine();
+       if (int.TryParse(input, out int duration) && duration > 0)
+       {
+           _duration = duration;
+       }
+       else
+      {
+          Console.WriteLine("Invalid duration. Defaulting to 10 seconds.");
+          _duration = 10;
+     }
+
         Console.WriteLine("\nGet ready...");
         ShowSpinner(3);
     }

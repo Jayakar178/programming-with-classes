@@ -2,11 +2,9 @@ using System;
 
 public class BreathingActivity : MindfulnessActivity
 {
-    public BreathingActivity()
-    {
-        _name = "Breathing Activity";
-        _description = "This activity will help you relax by guiding you through slow breathing.";
-    }
+    public BreathingActivity() 
+        : base("Breathing Activity", "This activity will help you relax by guiding you through slow breathing.") 
+    { }
 
     public void Run()
     {

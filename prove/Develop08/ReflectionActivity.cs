@@ -21,11 +21,9 @@ public class ReflectionActivity : MindfulnessActivity
         "What is your favorite thing about this experience?"
     };
 
-    public ReflectionActivity()
-    {
-        _name = "Reflection Activity";
-        _description = "Reflect on times when you have shown strength and resilience.";
-    }
+    public ReflectionActivity() 
+        : base("Reflection Activity", "Reflect on times when you have shown strength and resilience.") 
+    { }
 
     public void Run()
     {
