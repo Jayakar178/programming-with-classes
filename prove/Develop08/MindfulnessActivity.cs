@@ -11,6 +11,7 @@ public class MindfulnessActivity
     {
         _name = name;
         _description = description;
+        _duration = 0;
     }
 
     public void StartMessage()
